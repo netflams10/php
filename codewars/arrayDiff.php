@@ -8,10 +8,18 @@
         //         // unset($a[$index]);
         //     }
         // }
+        $latest_array = array();
 
-        return array_diff($a, $b);
+        foreach ($a as $v) {
+            if (!in_array($v, $b)) {
+                array_push($latest_array, $v);
+            }
+        }
+
+        return $latest_array;
     }
 
     print_r (arrayDiff([1,2,2,2,3],[2]));
     echo "\n";
     print_r(arrayDiff([1,2], [1]));
+
