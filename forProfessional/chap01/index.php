@@ -4,7 +4,13 @@
         <title>PHP</title>
     </head>
     <body>
-        <?php echo "Hello World" ?>
+        <?php 
+            // header('Content-Type: text/plain');
+            $data = ["response" => "Hello World!"];
+            echo json_encode($data);
+            // echo json_encode($data); // will not display
+            // echo "Hello World \n"; 
+        ?>
         <?= "Hello World!" ?>
     </body>
 </html>
