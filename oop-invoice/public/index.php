@@ -6,4 +6,5 @@
 
     $repo = new Invoice();
     $repo->findOne(4);
+    
     require_once "views/home.php";
